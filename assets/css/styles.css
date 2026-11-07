@@ -788,6 +788,62 @@ button {
   flex-shrink: 0;
 }
 
+.about-visual-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.about-image-card {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-card), var(--gold-glow);
+}
+
+.about-store-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.about-image-card:hover .about-store-img {
+  transform: scale(1.05);
+}
+
+.about-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(15, 17, 23, 0.1) 0%, rgba(15, 17, 23, 0.8) 100%);
+  pointer-events: none;
+}
+
+.about-image-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(10, 12, 17, 0.88);
+  border: 1px solid var(--border-gold);
+  backdrop-filter: blur(8px);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold-300);
+}
+
 /* Vitrine institucional de credenciais */
 .about-card-banner {
   background: linear-gradient(150deg, #181C28 0%, #0F1117 100%);
@@ -1818,7 +1874,7 @@ button {
   background: linear-gradient(155deg, #171B26 0%, #0F1117 100%);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 2.25rem 2rem;
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1851,19 +1907,53 @@ button {
   opacity: 1;
 }
 
+.product-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background: #090B10;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.08);
+}
+
+.product-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(19, 22, 31, 0.6) 100%);
+  pointer-events: none;
+}
+
 .product-badge-pill {
   position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
+  top: 0.85rem;
+  left: 0.85rem;
+  z-index: 2;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.5px;
-  padding: 0.35rem 0.8rem;
+  padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(10, 12, 17, 0.88);
   border: 1px solid var(--border-gold);
   color: var(--gold-300);
   backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
 }
 
 .product-icon-box {
