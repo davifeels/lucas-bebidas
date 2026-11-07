@@ -1,22 +1,24 @@
 /* ==========================================================================
    LUCAS BEBIDAS — GUIA DE IDENTIDADE VISUAL & BRAND SYSTEM (CSS)
-   Identidade: Antigravity (Advanced Branding & UI/UX Specialist)
+   Identidade: Antigravity (Advanced Branding, UI/UX & Web Engineering Specialist)
+   Layout: Widescreen 90% Viewport
    ========================================================================== */
 
 .brand-guide-hero {
-  padding-top: calc(var(--header-height) + 3rem);
-  padding-bottom: 3.5rem;
-  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 60%);
+  padding-top: calc(var(--header-height) + 4rem);
+  padding-bottom: 4.5rem;
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.16) 0%, transparent 65%);
   border-bottom: 1px solid var(--border-subtle);
   text-align: center;
 }
 
 .brand-guide-hero .section-title {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  letter-spacing: -1px;
 }
 
 .brand-guide-section {
-  padding: 4.5rem 0;
+  padding: 5.5rem 0;
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -25,25 +27,26 @@
 }
 
 /* -----------------------------
-   COMPARAÇÃO ANTES & DEPOIS
+   COMPARAÇÃO ANTES & DEPOIS WIDESCREEN
    ----------------------------- */
 .comparison-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  margin-top: 2rem;
+  gap: 3.5rem;
+  margin-top: 2.5rem;
 }
 
 .comparison-card {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
-  padding: 2.5rem 2rem;
+  padding: 3.5rem 3rem;
   text-align: center;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: var(--shadow-card);
 }
 
 .comparison-card.original {
@@ -52,19 +55,19 @@
 
 .comparison-card.modernized {
   border-color: var(--gold-500);
-  background: linear-gradient(165deg, #171A24 0%, #0F1117 100%);
-  box-shadow: var(--shadow-elevated), 0 0 30px rgba(212, 175, 55, 0.15);
+  background: linear-gradient(165deg, #181C26 0%, #0F1116 100%);
+  box-shadow: var(--shadow-elevated), var(--gold-glow);
 }
 
 .badge-comparison-tag {
   position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
-  font-size: 0.75rem;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 0.35rem 0.8rem;
+  padding: 0.4rem 0.95rem;
   border-radius: var(--radius-full);
 }
 
@@ -76,74 +79,77 @@
 .badge-comparison-tag.tag-new {
   background: var(--gold-500);
   color: #0E1015;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
 }
 
 .comparison-img-box {
-  min-height: 260px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 .comparison-img-box img {
-  max-height: 220px;
+  max-height: 260px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.6));
 }
 
 .comparison-card h3 {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
 }
 
 .comparison-card p {
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* -----------------------------
-   GRID DE VARIANTES DA LOGO
+   GRID DE VARIANTES DA LOGO (3 COLUNAS WIDESCREEN)
    ----------------------------- */
 .variants-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+  margin-top: 2.5rem;
 }
 
 .variant-card {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   transition: var(--transition-normal);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: var(--shadow-subtle);
 }
 
 .variant-card:hover {
   border-color: var(--gold-500);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card), 0 0 25px rgba(212, 175, 55, 0.15);
 }
 
 .variant-preview-box {
-  min-height: 190px;
+  min-height: 220px;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .variant-preview-box.dark-bg {
-  background: #090A0D;
+  background: #090A0E;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -153,36 +159,37 @@
 }
 
 .variant-preview-box img {
-  max-height: 140px;
+  max-height: 160px;
   width: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
 }
 
 .variant-meta h4 {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
 }
 
 .variant-meta p {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .variant-actions {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .btn-download-asset {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 0.5rem 0.9rem;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  font-weight: 800;
+  padding: 0.65rem 1.15rem;
   border-radius: var(--radius-sm);
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border-card);
@@ -194,16 +201,17 @@
   background: var(--gold-500);
   color: #0E1015;
   border-color: var(--gold-500);
+  transform: translateY(-1px);
 }
 
 /* -----------------------------
-   PALETA CROMÁTICA INTERATIVA
+   PALETA CROMÁTICA INTERATIVA (6 COLUNAS WIDESCREEN)
    ----------------------------- */
 .palette-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .color-swatch-card {
@@ -213,16 +221,17 @@
   overflow: hidden;
   cursor: pointer;
   transition: var(--transition-normal);
+  box-shadow: var(--shadow-subtle);
 }
 
 .color-swatch-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-card);
   border-color: var(--gold-500);
 }
 
 .color-preview-block {
-  height: 120px;
+  height: 140px;
   width: 100%;
   position: relative;
   display: flex;
@@ -231,11 +240,11 @@
 }
 
 .copy-hex-badge {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.35rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.4rem 0.8rem;
   border-radius: var(--radius-full);
   opacity: 0;
   transform: scale(0.9);
@@ -248,21 +257,21 @@
 }
 
 .color-info-block {
-  padding: 1.25rem;
+  padding: 1.5rem 1.25rem;
 }
 
 .color-name {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
 }
 
 .color-role {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .color-hex-row {
@@ -270,62 +279,64 @@
   justify-content: space-between;
   align-items: center;
   font-family: monospace;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   color: var(--gold-300);
-  font-weight: 700;
+  font-weight: 800;
   border-top: 1px solid var(--border-subtle);
-  padding-top: 0.5rem;
+  padding-top: 0.65rem;
 }
 
 /* -----------------------------
-   TIPOGRAFIA DO SISTEMA
+   TIPOGRAFIA DO SISTEMA WIDESCREEN
    ----------------------------- */
 .typography-showcase-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  margin-top: 2rem;
+  gap: 3rem;
+  margin-top: 2.5rem;
 }
 
 .type-family-card {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: 2rem;
+  padding: 2.75rem;
+  box-shadow: var(--shadow-subtle);
 }
 
 .type-family-title {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 2px;
   color: var(--gold-400);
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .type-specimen-large {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: var(--text-primary);
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
 }
 
 .type-meta-desc {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
 .alphabet-sample {
   font-family: monospace;
-  font-size: 0.85rem;
-  color: var(--text-faint);
+  font-size: 0.92rem;
+  color: var(--text-secondary);
   letter-spacing: 1px;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
   border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
 }
 
 /* -----------------------------
@@ -334,33 +345,34 @@
 .rules-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 3rem;
+  margin-top: 2.5rem;
 }
 
 .rule-box {
   background: var(--bg-card);
   border-radius: var(--radius-md);
-  padding: 2rem;
+  padding: 2.75rem;
   border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-subtle);
 }
 
 .rule-box.dos {
-  border-left: 4px solid #10B981;
+  border-left: 5px solid #10B981;
 }
 
 .rule-box.donts {
-  border-left: 4px solid #EF4444;
+  border-left: 5px solid #EF4444;
 }
 
 .rule-box-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 800;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .rule-box.dos .rule-box-header {
@@ -375,16 +387,16 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
 .rule-list-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
-  font-size: 0.9rem;
+  gap: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .rule-list-item svg {
@@ -392,10 +404,30 @@
   margin-top: 3px;
 }
 
+/* -----------------------------
+   RESPONSIVIDADE BRAND GUIDE
+   ----------------------------- */
+@media (max-width: 1400px) {
+  .palette-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .variants-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .comparison-grid,
   .typography-showcase-grid,
-  .rules-grid {
+  .rules-grid,
+  .variants-grid {
     grid-template-columns: 1fr;
+  }
+
+  .palette-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -1,6 +1,6 @@
 /**
  * LUCAS BEBIDAS — LÓGICA E EXPERIÊNCIA DO CLIENTE (JS)
- * Identidade: Antigravity (Advanced Branding & UI/UX Specialist)
+ * Identidade: Antigravity (Advanced Branding, UI/UX & Web Engineering Specialist)
  * Planaltina-DF — Fuso Horário de Brasília (UTC-3)
  */
 
@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initFaqAccordion();
   initCopyAddress();
+  initHeroCardTilt();
 });
 
 /**
@@ -19,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function getBrasiliaDate() {
   const now = new Date();
-  // Converte para UTC e subtrai 3 horas (Horário Padrão de Brasília)
   const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
   return new Date(utc - (3 * 3600000));
 }
@@ -70,7 +70,7 @@ function initRealTimeStatus() {
           <span>Atendimento Aberto até 02:00</span>
         `;
         badge.style.color = '#34D399';
-        badge.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+        badge.style.borderColor = 'rgba(16, 185, 129, 0.45)';
         badge.style.background = 'rgba(16, 185, 129, 0.15)';
       } else {
         badge.innerHTML = `
@@ -145,7 +145,7 @@ function initHeaderScroll() {
   if (!header) return;
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 30) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
@@ -166,7 +166,7 @@ function initFaqAccordion() {
     questionBtn.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
-      // Fecha todos os outros para manter a tela limpa
+      // Fecha os outros para manter leitura limpa
       faqItems.forEach(other => other.classList.remove('active'));
 
       if (!isActive) {
@@ -192,7 +192,6 @@ function initCopyAddress() {
         await navigator.clipboard.writeText(fullAddress);
         showToast("Endereço copiado para a área de transferência!");
       } catch (err) {
-        // Fallback caso clipboard API falhe
         const tempInput = document.createElement('textarea');
         tempInput.value = fullAddress;
         document.body.appendChild(tempInput);
@@ -212,4 +211,30 @@ function initCopyAddress() {
       toast.classList.remove('show');
     }, 3200);
   }
+}
+
+/**
+ * 7. EFEITO 3D TILT SUTIL NO CARD DO HERO (DESKTOP)
+ */
+function initHeroCardTilt() {
+  const card = document.querySelector('.hero-card-display');
+  if (!card || window.innerWidth < 1024) return;
+
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateX = ((y - centerY) / centerY) * -5;
+    const rotateY = ((x - centerX) / centerX) * 5;
+    
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+  });
 }
