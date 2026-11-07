@@ -1,0 +1,401 @@
+/* ==========================================================================
+   LUCAS BEBIDAS — GUIA DE IDENTIDADE VISUAL & BRAND SYSTEM (CSS)
+   Identidade: Antigravity (Advanced Branding & UI/UX Specialist)
+   ========================================================================== */
+
+.brand-guide-hero {
+  padding-top: calc(var(--header-height) + 3rem);
+  padding-bottom: 3.5rem;
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 60%);
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: center;
+}
+
+.brand-guide-hero .section-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.brand-guide-section {
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.brand-guide-section:last-of-type {
+  border-bottom: none;
+}
+
+/* -----------------------------
+   COMPARAÇÃO ANTES & DEPOIS
+   ----------------------------- */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.comparison-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.comparison-card.original {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.comparison-card.modernized {
+  border-color: var(--gold-500);
+  background: linear-gradient(165deg, #171A24 0%, #0F1117 100%);
+  box-shadow: var(--shadow-elevated), 0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+.badge-comparison-tag {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
+}
+
+.badge-comparison-tag.tag-old {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+}
+
+.badge-comparison-tag.tag-new {
+  background: var(--gold-500);
+  color: #0E1015;
+}
+
+.comparison-img-box {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.comparison-img-box img {
+  max-height: 220px;
+  width: auto;
+  object-fit: contain;
+}
+
+.comparison-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.comparison-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* -----------------------------
+   GRID DE VARIANTES DA LOGO
+   ----------------------------- */
+.variants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.variant-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.variant-card:hover {
+  border-color: var(--gold-500);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.variant-preview-box {
+  min-height: 190px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.variant-preview-box.dark-bg {
+  background: #090A0D;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.variant-preview-box.light-bg {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+}
+
+.variant-preview-box img {
+  max-height: 140px;
+  width: auto;
+}
+
+.variant-meta h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.variant-meta p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.variant-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-download-asset {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-card);
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.btn-download-asset:hover {
+  background: var(--gold-500);
+  color: #0E1015;
+  border-color: var(--gold-500);
+}
+
+/* -----------------------------
+   PALETA CROMÁTICA INTERATIVA
+   ----------------------------- */
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.color-swatch-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.color-swatch-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--gold-500);
+}
+
+.color-preview-block {
+  height: 120px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-hex-badge {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-full);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: var(--transition-fast);
+}
+
+.color-swatch-card:hover .copy-hex-badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.color-info-block {
+  padding: 1.25rem;
+}
+
+.color-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.color-role {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.color-hex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--gold-300);
+  font-weight: 700;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.5rem;
+}
+
+/* -----------------------------
+   TIPOGRAFIA DO SISTEMA
+   ----------------------------- */
+.typography-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.type-family-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+}
+
+.type-family-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--gold-400);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.type-specimen-large {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.type-meta-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.alphabet-sample {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+/* -----------------------------
+   REGRAS DE USO (DO'S & DON'TS)
+   ----------------------------- */
+.rules-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.rule-box {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  border: 1px solid var(--border-card);
+}
+
+.rule-box.dos {
+  border-left: 4px solid #10B981;
+}
+
+.rule-box.donts {
+  border-left: 4px solid #EF4444;
+}
+
+.rule-box-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+}
+
+.rule-box.dos .rule-box-header {
+  color: #34D399;
+}
+
+.rule-box.donts .rule-box-header {
+  color: #F87171;
+}
+
+.rule-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.rule-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.rule-list-item svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+@media (max-width: 900px) {
+  .comparison-grid,
+  .typography-showcase-grid,
+  .rules-grid {
+    grid-template-columns: 1fr;
+  }
+}

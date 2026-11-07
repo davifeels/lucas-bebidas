@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="goldLinear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCEBA4"/>
+      <stop offset="25%" stop-color="#E4B441"/>
+      <stop offset="50%" stop-color="#C28F22"/>
+      <stop offset="75%" stop-color="#F3D169"/>
+      <stop offset="100%" stop-color="#996D13"/>
+    </linearGradient>
+
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFEFA8"/>
+      <stop offset="50%" stop-color="#D8A32B"/>
+      <stop offset="100%" stop-color="#8F620E"/>
+    </linearGradient>
+
+    <radialGradient id="badgeBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1E2129"/>
+      <stop offset="60%" stop-color="#12141A"/>
+      <stop offset="100%" stop-color="#08090C"/>
+    </radialGradient>
+
+    <linearGradient id="textSilver" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="48%" stop-color="#F1F5F9"/>
+      <stop offset="52%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadowGold" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#D4AF37" flood-opacity="0.35"/>
+    </filter>
+
+    <filter id="shadowDark" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base Shadow -->
+  <circle cx="250" cy="275" r="165" fill="#000000" opacity="0.3" filter="url(#shadowDark)" />
+
+  <!-- Outer Golden Laurel Branches (Left & Right) -->
+  <g id="laurel-left" fill="url(#goldLinear)" filter="url(#shadowGold)">
+    <!-- Stem left -->
+    <path d="M125 350 C105 310 100 250 115 190 C113 250 120 310 145 365 Z" opacity="0.8"/>
+    <!-- Leaves left -->
+    <path d="M102 195 C88 200 80 215 85 225 C92 222 105 210 106 195 Z"/>
+    <path d="M92 228 C76 235 70 250 78 260 C85 255 96 242 97 228 Z"/>
+    <path d="M86 265 C68 273 65 290 73 300 C80 293 90 280 91 265 Z"/>
+    <path d="M85 305 C68 315 67 332 78 340 C84 332 91 318 90 305 Z"/>
+    <path d="M94 345 C80 357 82 374 95 380 C99 370 103 356 98 345 Z"/>
+    <path d="M112 380 C100 395 107 410 120 414 C123 402 123 389 116 380 Z"/>
+    <path d="M138 410 C128 424 139 438 153 438 C153 425 149 414 141 410 Z"/>
+    <path d="M172 433 C165 447 179 458 193 454 C190 442 182 433 174 433 Z"/>
+  </g>
+
+  <!-- Laurel Right (mirrored) -->
+  <use href="#laurel-left" transform="translate(500, 0) scale(-1, 1)" />
+
+  <!-- Outer Ring Gold -->
+  <circle cx="250" cy="275" r="162" fill="none" stroke="url(#goldLinear)" stroke-width="8" filter="url(#shadowGold)"/>
+  
+  <!-- Subtle Inset Ring -->
+  <circle cx="250" cy="275" r="154" fill="none" stroke="#FCEBA4" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Badge Center Core -->
+  <circle cx="250" cy="275" r="150" fill="url(#badgeBg)"/>
+
+  <!-- Subtle Radial Grid texture on badge -->
+  <circle cx="250" cy="275" r="135" fill="none" stroke="url(#goldAccent)" stroke-width="1" opacity="0.25" stroke-dasharray="4,4"/>
+
+  <!-- ==================== CROWN ==================== -->
+  <g id="crown" transform="translate(0, -5)" filter="url(#shadowGold)">
+    <!-- Crown Base Band -->
+    <path d="M185 155 Q250 170 315 155 L310 167 Q250 182 190 167 Z" fill="url(#goldAccent)"/>
+    
+    <!-- Crown Jewels on base band -->
+    <circle cx="215" cy="164" r="3.5" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="250" cy="168" r="4.5" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="285" cy="164" r="3.5" fill="#FFFFFF" opacity="0.9"/>
+
+    <!-- Crown Peaks Body -->
+    <path d="M185 155 
+             L165 85 Q178 80 185 92 
+             L215 130 
+             L250 50 Q258 50 262 60 
+             L285 130 
+             L315 92 Q322 80 335 85 
+             L315 155 
+             Q250 170 185 155 Z" 
+          fill="url(#goldLinear)" stroke="#FCEBA4" stroke-width="1.5"/>
+
+    <!-- Crown Pearls / Spheres atop peaks -->
+    <circle cx="165" cy="85" r="8" fill="url(#goldAccent)" stroke="#FFEFA8" stroke-width="1.5"/>
+    <circle cx="163" cy="83" r="2.5" fill="#FFFFFF" opacity="0.8"/>
+
+    <circle cx="205" cy="100" r="6" fill="url(#goldAccent)" stroke="#FFEFA8" stroke-width="1.5"/>
+    <circle cx="203" cy="98" r="2" fill="#FFFFFF" opacity="0.8"/>
+
+    <circle cx="250" cy="50" r="10" fill="url(#goldAccent)" stroke="#FFEFA8" stroke-width="2"/>
+    <circle cx="247" cy="47" r="3.5" fill="#FFFFFF" opacity="0.9"/>
+
+    <circle cx="295" cy="100" r="6" fill="url(#goldAccent)" stroke="#FFEFA8" stroke-width="1.5"/>
+    <circle cx="293" cy="98" r="2" fill="#FFFFFF" opacity="0.8"/>
+
+    <circle cx="335" cy="85" r="8" fill="url(#goldAccent)" stroke="#FFEFA8" stroke-width="1.5"/>
+    <circle cx="333" cy="83" r="2.5" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+
+  <!-- ==================== TYPOGRAPHY: LUCAS ==================== -->
+  <g id="typography-lucas" transform="translate(0, 20)">
+    <!-- Drop Shadow / Thick Outline Layer -->
+    <text x="250" y="275" 
+          text-anchor="middle" 
+          font-family="'Montserrat', 'Arial Black', sans-serif" 
+          font-weight="900" 
+          font-size="82" 
+          letter-spacing="2" 
+          fill="#0B0C0E" 
+          stroke="#0B0C0E" 
+          stroke-width="20" 
+          stroke-linejoin="round">LUCAS</text>
+
+    <!-- Golden Outer Stroke -->
+    <text x="250" y="275" 
+          text-anchor="middle" 
+          font-family="'Montserrat', 'Arial Black', sans-serif" 
+          font-weight="900" 
+          font-size="82" 
+          letter-spacing="2" 
+          fill="url(#goldLinear)" 
+          stroke="url(#goldLinear)" 
+          stroke-width="10" 
+          stroke-linejoin="round">LUCAS</text>
+
+    <!-- Inner Charcoal Stroke -->
+    <text x="250" y="275" 
+          text-anchor="middle" 
+          font-family="'Montserrat', 'Arial Black', sans-serif" 
+          font-weight="900" 
+          font-size="82" 
+          letter-spacing="2" 
+          fill="#1E222B" 
+          stroke="#1E222B" 
+          stroke-width="4" 
+          stroke-linejoin="round">LUCAS</text>
+
+    <!-- Primary Text Body (Chrome / Silver Gradient) -->
+    <text x="250" y="275" 
+          text-anchor="middle" 
+          font-family="'Montserrat', 'Arial Black', sans-serif" 
+          font-weight="900" 
+          font-size="82" 
+          letter-spacing="2" 
+          fill="url(#textSilver)">LUCAS</text>
+  </g>
+
+  <!-- ==================== TYPOGRAPHY: Bebidas ==================== -->
+  <g id="typography-bebidas" transform="translate(0, 10)">
+    <!-- Bebidas Shadow -->
+    <text x="250" y="342" 
+          text-anchor="middle" 
+          font-family="'Playball', 'Brush Script MT', 'Dancing Script', cursive" 
+          font-style="italic"
+          font-weight="700" 
+          font-size="64" 
+          fill="#000000" 
+          stroke="#000000" 
+          stroke-width="8"
+          stroke-linejoin="round">Bebidas</text>
+
+    <!-- Bebidas Main Gold script -->
+    <text x="250" y="342" 
+          text-anchor="middle" 
+          font-family="'Playball', 'Brush Script MT', 'Dancing Script', cursive" 
+          font-style="italic"
+          font-weight="700" 
+          font-size="64" 
+          fill="url(#goldLinear)"
+          stroke="#5C4008"
+          stroke-width="1.5">Bebidas</text>
+  </g>
+
+  <!-- Decorative baseline star / quality seal -->
+  <g transform="translate(250, 395)" fill="url(#goldAccent)">
+    <polygon points="0,-7 2,-2 7,-2 3,2 5,7 0,4 -5,7 -3,2 -7,-2 -2,-2" />
+    <circle cx="-35" cy="0" r="1.5" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="-25" cy="0" r="2" fill="#D4AF37" opacity="0.8"/>
+    <circle cx="-15" cy="0" r="2.5" fill="#D4AF37"/>
+    <circle cx="15" cy="0" r="2.5" fill="#D4AF37"/>
+    <circle cx="25" cy="0" r="2" fill="#D4AF37" opacity="0.8"/>
+    <circle cx="35" cy="0" r="1.5" fill="#D4AF37" opacity="0.6"/>
+  </g>
+
+  <!-- Bottom Location tag -->
+  <text x="250" y="415" 
+        text-anchor="middle" 
+        font-family="'Montserrat', sans-serif" 
+        font-weight="600" 
+        font-size="11" 
+        letter-spacing="5" 
+        fill="#C5A038">PLANALTINA • DF</text>
+</svg>

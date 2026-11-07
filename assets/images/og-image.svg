@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16181F"/>
+      <stop offset="50%" stop-color="#0E1015"/>
+      <stop offset="100%" stop-color="#07070A"/>
+    </linearGradient>
+
+    <linearGradient id="ogGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEFA8"/>
+      <stop offset="30%" stop-color="#E5AF36"/>
+      <stop offset="70%" stop-color="#C28F22"/>
+      <stop offset="100%" stop-color="#8F620E"/>
+    </linearGradient>
+
+    <radialGradient id="ogGlow" cx="25%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  <rect width="1200" height="630" fill="url(#ogGlow)"/>
+
+  <!-- Border Frame -->
+  <rect x="25" y="25" width="1150" height="580" rx="16" fill="none" stroke="#262A36" stroke-width="2"/>
+  <rect x="35" y="35" width="1130" height="560" rx="12" fill="none" stroke="url(#ogGold)" stroke-width="1" stroke-dasharray="8,8" opacity="0.4"/>
+
+  <!-- Left: Circular Logo Seal -->
+  <g transform="translate(260, 315)">
+    <!-- Outer Ring -->
+    <circle cx="0" cy="0" r="170" fill="#12141A" stroke="url(#ogGold)" stroke-width="6"/>
+    <circle cx="0" cy="0" r="155" fill="none" stroke="#FFEFA8" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Crown -->
+    <g transform="translate(0, -50) scale(0.9)">
+      <path d="M-60 25 L-75 -35 L-30 -5 L0 -65 L30 -5 L75 -35 L60 25 Q0 38 -60 25 Z" fill="url(#ogGold)"/>
+      <circle cx="-75" cy="-35" r="7" fill="url(#ogGold)"/>
+      <circle cx="-30" cy="-5" r="5" fill="url(#ogGold)"/>
+      <circle cx="0" cy="-65" r="9" fill="url(#ogGold)"/>
+      <circle cx="30" cy="-5" r="5" fill="url(#ogGold)"/>
+      <circle cx="75" cy="-35" r="7" fill="url(#ogGold)"/>
+    </g>
+
+    <text x="0" y="45" 
+          text-anchor="middle" 
+          font-family="'Montserrat', 'Arial Black', sans-serif" 
+          font-weight="900" 
+          font-size="60" 
+          letter-spacing="2" 
+          fill="#FFFFFF">LUCAS</text>
+
+    <text x="0" y="95" 
+          text-anchor="middle" 
+          font-family="'Playball', 'Brush Script MT', cursive" 
+          font-style="italic" 
+          font-weight="700" 
+          font-size="44" 
+          fill="url(#ogGold)">Bebidas</text>
+  </g>
+
+  <!-- Right: Content & Operational Info -->
+  <g transform="translate(520, 160)">
+    <!-- Tag -->
+    <rect x="0" y="0" width="310" height="34" rx="17" fill="#1E2330" stroke="#374151" stroke-width="1"/>
+    <circle cx="18" cy="17" r="5" fill="#10B981"/>
+    <text x="32" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#E2E8F0" letter-spacing="2">PLANALTINA - DF • BURITIS I</text>
+
+    <!-- Main Title -->
+    <text x="0" y="90" font-family="'Montserrat', sans-serif" font-weight="900" font-size="64" fill="#FFFFFF">LUCAS BEBIDAS</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="22" fill="#F1F5F9">Conveniência e Atendimento Local de Confiança</text>
+    <text x="0" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-weight="400" font-size="18" fill="#94A3B8">Segunda a Domingo • Funcionamento Estendido das 09h às 02h</text>
+
+    <!-- Divider -->
+    <line x1="0" y1="215" x2="580" y2="215" stroke="#2A2F3D" stroke-width="1.5"/>
+
+    <!-- Contact & Rating -->
+    <g transform="translate(0, 245)">
+      <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="18" fill="url(#ogGold)">★ 4,7 de Avaliação</text>
+      <text x="220" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="18" fill="#CBD5E1">WhatsApp: (61) 99151-8831</text>
+    </g>
+
+    <g transform="translate(0, 310)">
+      <text x="0" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-weight="400" font-size="14" fill="#64748B">St. Residencial Leste, Buritis I, Qd. 02, Cj. I, Lt. 41 - Vila Buritis</text>
+    </g>
+  </g>
+</svg>

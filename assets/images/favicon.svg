@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEFA8"/>
+      <stop offset="50%" stop-color="#E5AF36"/>
+      <stop offset="100%" stop-color="#996D13"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Disc -->
+  <rect width="64" height="64" rx="14" fill="#0E1015"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="url(#favGold)" stroke-width="2"/>
+  
+  <!-- Crown Icon -->
+  <path d="M14 26 L10 16 L22 21 L32 10 L42 21 L54 16 L50 26 Z" fill="url(#favGold)"/>
+  <circle cx="10" cy="15" r="2" fill="#FFEFA8"/>
+  <circle cx="22" cy="20" r="1.5" fill="#FFEFA8"/>
+  <circle cx="32" cy="9" r="2.5" fill="#FFEFA8"/>
+  <circle cx="42" cy="20" r="1.5" fill="#FFEFA8"/>
+  <circle cx="54" cy="15" r="2" fill="#FFEFA8"/>
+
+  <!-- Bold Letter L -->
+  <text x="32" y="52" 
+        text-anchor="middle" 
+        font-family="'Montserrat', 'Arial Black', sans-serif" 
+        font-weight="900" 
+        font-size="28" 
+        fill="#FFFFFF">L</text>
+</svg>
