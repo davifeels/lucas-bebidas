@@ -49,6 +49,7 @@
       <nav aria-label="Navegação Principal">
         <ul class="nav-links" id="navLinks">
           <li><a href="#hero">Início</a></li>
+          <li><a href="#catalogo" style="color: var(--gold-300); font-weight: 800;">✨ Catálogo &amp; Produtos</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#atendimento">Atendimento</a></li>
           <li><a href="#horarios">Horários</a></li>
@@ -109,14 +110,24 @@
 
         <!-- Ações Principais -->
         <div class="hero-actions">
-          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20da%20Lucas%20Bebidas!" 
+          <a href="#catalogo" 
              class="btn btn-gold" 
+             style="box-shadow: 0 6px 24px rgba(212, 175, 55, 0.45);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            <span>Ver Catálogo de Produtos</span>
+          </a>
+
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20da%20Lucas%20Bebidas!" 
+             class="btn btn-outline" 
              target="_blank" 
              rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/>
             </svg>
-            <span>Chamar no WhatsApp</span>
+            <span>Falar no WhatsApp</span>
           </a>
 
           <a href="https://www.google.com/maps/search/?api=1&query=St.+Residencial+Leste,+Buritis+I,+Quadra+02,+Conjunto+I,+Lote+41,+Planaltina+-+DF,+73350-210" 
@@ -127,7 +138,7 @@
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
               <circle cx="12" cy="9" r="2.5"/>
             </svg>
-            <span>Ver Rota no Google Maps</span>
+            <span>Ver Rota</span>
           </a>
 
           <button class="btn-copy-address" type="button" title="Copiar endereço completo">
@@ -259,8 +270,388 @@
   </section>
 
   <!-- =================================================================
-       SEÇÃO SOBRE O ESTABELECIMENTO
+       SEÇÃO CATÁLOGO & VITRINE DE CONVENIÊNCIA
        ================================================================= -->
+  <section class="section-catalogo" id="catalogo">
+    <div class="container">
+      <div class="catalogo-header-wrap">
+        <span class="section-tag">✨ Vitrine &amp; Conveniência • Planaltina-DF</span>
+        <h2 class="section-title">Catálogo de Bebidas, Picolés &amp; Conveniência</h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+          Conheça nosso mix completo de produtos sempre gelados e prontos para o seu dia a dia, almoço de família ou churrasco do fim de semana. Retirada rápida no balcão na Vila Buritis ou consulta instantânea via WhatsApp.
+        </p>
+      </div>
+
+      <!-- Barra de Pesquisa e Filtros por Categoria -->
+      <div class="catalogo-controls-box">
+        <div class="catalogo-search-row">
+          <svg class="catalogo-search-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="catalogoSearchInput" class="catalogo-search-input" placeholder="Buscar produto por nome (ex: picolé, coca-cola, gelo, carvão, suco, água de coco, batata...)">
+        </div>
+
+        <div class="catalogo-tabs-wrap">
+          <button class="catalogo-tab-btn active" data-filter="all" type="button">
+            <span>Todos os Produtos</span>
+          </button>
+          <button class="catalogo-tab-btn" data-filter="picoles" type="button">
+            <span>🍦 Picolés &amp; Sorvetes</span>
+          </button>
+          <button class="catalogo-tab-btn" data-filter="refris" type="button">
+            <span>🥤 Refrigerantes &amp; Sucos</span>
+          </button>
+          <button class="catalogo-tab-btn" data-filter="gelo-carvao" type="button">
+            <span>🧊 Gelo &amp; Carvão</span>
+          </button>
+          <button class="catalogo-tab-btn" data-filter="aguas" type="button">
+            <span>💧 Águas &amp; Hidratação</span>
+          </button>
+          <button class="catalogo-tab-btn" data-filter="snacks" type="button">
+            <span>🍿 Snacks &amp; Aperitivos</span>
+          </button>
+          <button class="catalogo-tab-btn" data-filter="bebidas" type="button">
+            <span>🍾 Adega &amp; Bebidas (+18)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid de Produtos Widescreen -->
+      <div class="catalogo-grid" id="catalogoGrid">
+
+        <!-- 1. Picolé Frutado -->
+        <div class="product-card" data-category="picoles">
+          <div>
+            <span class="product-badge-pill">❄️ 100% Refrescante</span>
+            <div class="product-icon-box">🍧</div>
+            <div class="product-cat-tag">Picolés &amp; Gelados</div>
+            <h3 class="product-title">Picolés Frutados Artesanais</h3>
+            <p class="product-desc">Sabores puros de Limão, Maracujá, Morango, Uva e Açaí. Fruta de verdade e congelamento constante a -18°C.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Sem Gordura Trans</span>
+              <span class="product-micro-tag">Fruta Natural</span>
+              <span class="product-micro-tag">Super Gelado</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20disponibilidade%20de%20Picol%C3%A9s%20Frutados%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Sabores</span>
+          </a>
+        </div>
+
+        <!-- 2. Picolé Cremoso Especial -->
+        <div class="product-card" data-category="picoles">
+          <div>
+            <span class="product-badge-pill">⭐ Linha Especial</span>
+            <div class="product-icon-box">🍦</div>
+            <div class="product-cat-tag">Picolés &amp; Gelados</div>
+            <h3 class="product-title">Picolés Cremosos Gourmet</h3>
+            <p class="product-desc">Cremosidade e sabor marcante: Ninho Trufado, Chocolate Belga, Coco Branco com pedaços e Doce de Leite.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Textura Aveludada</span>
+              <span class="product-micro-tag">Recheio Nobre</span>
+              <span class="product-micro-tag">Mais Vendido</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20disponibilidade%20de%20Picol%C3%A9s%20Cremosos%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Sabores</span>
+          </a>
+        </div>
+
+        <!-- 3. Sorvete Pote Família -->
+        <div class="product-card" data-category="picoles">
+          <div>
+            <span class="product-badge-pill">🍨 Tamanho Família</span>
+            <div class="product-icon-box">🍨</div>
+            <div class="product-cat-tag">Picolés &amp; Gelados</div>
+            <h3 class="product-title">Sorvetes Pote Família (1,5L e 2L)</h3>
+            <p class="product-desc">Sobremesa garantida para reuniões e finais de semana. Sabores Napolitano, Creme Clássico, Flocos e Chocolate.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Potes 1,5L e 2L</span>
+              <span class="product-micro-tag">Para Sobremesa</span>
+              <span class="product-micro-tag">Pronta Retirada</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20disponibilidade%20de%20Potes%20de%20Sorvete%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Estoque</span>
+          </a>
+        </div>
+
+        <!-- 4. Refrigerantes Latas 350ml -->
+        <div class="product-card" data-category="refris">
+          <div>
+            <span class="product-badge-pill">⚡ Estalando de Gelada</span>
+            <div class="product-icon-box">🥤</div>
+            <div class="product-cat-tag">Refrigerantes &amp; Sucos</div>
+            <h3 class="product-title">Refrigerantes Latas (350ml)</h3>
+            <p class="product-desc">Coca-Cola Original e Zero, Guaraná Antarctica, Fanta Laranja/Uva e Sprite. Conservados em temperatura de geladeira comercial.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Geladeira Comercial</span>
+              <span class="product-micro-tag">Consumo Imediato</span>
+              <span class="product-micro-tag">Principais Marcas</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20Refrigerantes%20Lata%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Pedir Informações</span>
+          </a>
+        </div>
+
+        <!-- 5. Refrigerantes 2 Litros -->
+        <div class="product-card" data-category="refris">
+          <div>
+            <span class="product-badge-pill">🥤 Embalagem 2L</span>
+            <div class="product-icon-box">🍾</div>
+            <div class="product-cat-tag">Refrigerantes &amp; Sucos</div>
+            <h3 class="product-title">Refrigerantes 2 Litros (Linha Completa)</h3>
+            <p class="product-desc">Garrafas de 2L geladas para almoço em família, confraternizações e lanches. Variedade de marcas líderes.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Garrafas PET 2L</span>
+              <span class="product-micro-tag">Opção Zero e Normal</span>
+              <span class="product-micro-tag">Geladas</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20Refrigerantes%202L%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Marcas</span>
+          </a>
+        </div>
+
+        <!-- 6. Sucos Integrais e Naturais -->
+        <div class="product-card" data-category="refris">
+          <div>
+            <span class="product-badge-pill">🍇 100% Integral</span>
+            <div class="product-icon-box">🧃</div>
+            <div class="product-cat-tag">Refrigerantes &amp; Sucos</div>
+            <h3 class="product-title">Sucos Integrais de Fruta</h3>
+            <p class="product-desc">Suco de Uva integral, Laranja pasteurizado e Maracujá. Sem conservantes artificiais e rico em sabor natural.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Sem Açúcar Adicionado</span>
+              <span class="product-micro-tag">Garrafas Vidro &amp; Caixa</span>
+              <span class="product-micro-tag">Nutritivo</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20Sucos%20Integrais%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Sabores</span>
+          </a>
+        </div>
+
+        <!-- 7. Energéticos e Isotônicos -->
+        <div class="product-card" data-category="refris">
+          <div>
+            <span class="product-badge-pill">⚡ Energia Total</span>
+            <div class="product-icon-box">⚡</div>
+            <div class="product-cat-tag">Refrigerantes &amp; Sucos</div>
+            <h3 class="product-title">Energéticos &amp; Isotônicos</h3>
+            <p class="product-desc">Red Bull, Monster Energy, Gatorade e opções para foco, trabalho noturno e recuperação de eletrólitos.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Red Bull &amp; Monster</span>
+              <span class="product-micro-tag">Gatorade</span>
+              <span class="product-micro-tag">Geladíssimos</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20Energ%C3%A9ticos%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Opções</span>
+          </a>
+        </div>
+
+        <!-- 8. Gelo Filtrado em Cubos -->
+        <div class="product-card" data-category="gelo-carvao">
+          <div>
+            <span class="product-badge-pill">🧊 Água 100% Pura</span>
+            <div class="product-icon-box">🧊</div>
+            <div class="product-cat-tag">Gelo &amp; Carvão</div>
+            <h3 class="product-title">Gelo Filtrado em Cubos (5kg)</h3>
+            <p class="product-desc">Cubos sólidos e transparentes feitos com água triplamente filtrada. Demoram mais a derreter no seu copo ou cooler.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Pacote 5kg</span>
+              <span class="product-micro-tag">Alta Durabilidade</span>
+              <span class="product-micro-tag">Água Filtrada</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20Gelo%20em%20Cubos%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Disponibilidade</span>
+          </a>
+        </div>
+
+        <!-- 9. Carvão Vegetal Selecionado -->
+        <div class="product-card" data-category="gelo-carvao">
+          <div>
+            <span class="product-badge-pill">🔥 Brasa Intensa</span>
+            <div class="product-icon-box">🪵</div>
+            <div class="product-cat-tag">Gelo &amp; Carvão</div>
+            <h3 class="product-title">Carvão Vegetal Selecionado (Sacos)</h3>
+            <p class="product-desc">Madeira de reflorestamento com pedaços graúdos selecionados. Brasa duradoura, alto calor e pouca cinza para churrasco.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Pedaços Graúdos</span>
+              <span class="product-micro-tag">Brasa Longa</span>
+              <span class="product-micro-tag">Para Churrasco</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20Carv%C3%A3o%20Vegetal%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Tamanhos</span>
+          </a>
+        </div>
+
+        <!-- 10. Água Mineral Natural -->
+        <div class="product-card" data-category="aguas">
+          <div>
+            <span class="product-badge-pill">💧 Pureza Essencial</span>
+            <div class="product-icon-box">💧</div>
+            <div class="product-cat-tag">Águas &amp; Hidratação</div>
+            <h3 class="product-title">Água Mineral Natural (Sem Gás)</h3>
+            <p class="product-desc">Embalagens de 500ml e 1,5L de fontes nobres. Sempre disponível em temperatura ambiente ou trincando de gelada.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">500ml e 1,5L</span>
+              <span class="product-micro-tag">Gelada ou Ambiente</span>
+              <span class="product-micro-tag">Leveza Pura</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20%C3%81gua%20Mineral%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Pedir Informações</span>
+          </a>
+        </div>
+
+        <!-- 11. Água de Coco Integral -->
+        <div class="product-card" data-category="aguas">
+          <div>
+            <span class="product-badge-pill">🥥 100% Coco Verde</span>
+            <div class="product-icon-box">🥥</div>
+            <div class="product-cat-tag">Águas &amp; Hidratação</div>
+            <h3 class="product-title">Água de Coco Integral</h3>
+            <p class="product-desc">Isotônico natural por excelência. Doce natural da fruta verde, super gelada para dias ensolarados em Planaltina.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Sem Conservantes</span>
+              <span class="product-micro-tag">Hidratação Imediata</span>
+              <span class="product-micro-tag">Super Refrescante</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20%C3%81gua%20de%20Coco%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Estoque</span>
+          </a>
+        </div>
+
+        <!-- 12. Snacks & Batatas Crocantes -->
+        <div class="product-card" data-category="snacks">
+          <div>
+            <span class="product-badge-pill">🥔 Crocância Máxima</span>
+            <div class="product-icon-box">🥔</div>
+            <div class="product-cat-tag">Snacks &amp; Aperitivos</div>
+            <h3 class="product-title">Batatas Crocantes &amp; Salgadinhos</h3>
+            <p class="product-desc">Ruffles, Doritos, Cheetos, Lay's e batatas onduladas. O acompanhamento clássico para confraternizações e lanches.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Ruffles &amp; Doritos</span>
+              <span class="product-micro-tag">Pacotes Variados</span>
+              <span class="product-micro-tag">Petisco Perfeito</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20Salgadinhos%20e%20Snacks%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Opções</span>
+          </a>
+        </div>
+
+        <!-- 13. Amendoins e Petiscos -->
+        <div class="product-card" data-category="snacks">
+          <div>
+            <span class="product-badge-pill">🥜 Aperitivo de Balcão</span>
+            <div class="product-icon-box">🥜</div>
+            <div class="product-cat-tag">Snacks &amp; Aperitivos</div>
+            <h3 class="product-title">Amendoins &amp; Castanhas Selecionadas</h3>
+            <p class="product-desc">Amendoim tipo japonês, amendoim torrado salgado e castanhas. Crocantes, práticos e prontos para consumo.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Japonês e Tradicional</span>
+              <span class="product-micro-tag">Petisco Rápido</span>
+              <span class="product-micro-tag">Pronta Retirada</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20Amendoins%20e%20Castanhas%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Variedades</span>
+          </a>
+        </div>
+
+        <!-- 14. Chocolates e Doces -->
+        <div class="product-card" data-category="snacks">
+          <div>
+            <span class="product-badge-pill">🍫 Doce de Balcão</span>
+            <div class="product-icon-box">🍫</div>
+            <div class="product-cat-tag">Snacks &amp; Aperitivos</div>
+            <h3 class="product-title">Chocolates &amp; Bombons de Balcão</h3>
+            <p class="product-desc">Barras de chocolate, bombons, confeitos e doces tradicionais para adoçar o dia a dia e compras por impulso.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Snickers, KitKat</span>
+              <span class="product-micro-tag">Doces Variados</span>
+              <span class="product-micro-tag">Pronta Entrega</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20Chocolates%20e%20Doces%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Opções</span>
+          </a>
+        </div>
+
+        <!-- 15. Adega e Bebidas Institucional (+18) -->
+        <div class="product-card" data-category="bebidas">
+          <div>
+            <span class="product-badge-pill" style="border-color:#EF4444; color:#FCA5A5;">🔞 Venda +18 Anos</span>
+            <div class="product-icon-box">🍾</div>
+            <div class="product-cat-tag">Adega &amp; Conveniência</div>
+            <h3 class="product-title">Linha Institucional de Bebidas</h3>
+            <p class="product-desc">Atendimento e consultoria direta no balcão da Lucas Bebidas. Variedade e marcas tradicionais sob consulta ética e responsável.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Consumo Responsável</span>
+              <span class="product-micro-tag">Balcão Presencial</span>
+              <span class="product-micro-tag">Venda +18 Anos</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20institucionais%20sobre%20a%20linha%20de%20bebidas%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar no Balcão</span>
+          </a>
+        </div>
+
+        <!-- 16. Paletas Mexicanas Recheadas -->
+        <div class="product-card" data-category="picoles">
+          <div>
+            <span class="product-badge-pill">🍓 Recheio Vulcão</span>
+            <div class="product-icon-box">🍧</div>
+            <div class="product-cat-tag">Picolés &amp; Gelados</div>
+            <h3 class="product-title">Paletas Especiais Recheadas</h3>
+            <p class="product-desc">Morango com Leite Condensado cremoso, Maracujá trufado e Brigadeiro. Uma experiência rica para quem ama sobremesas geladas.</p>
+            <div class="product-tags-row">
+              <span class="product-micro-tag">Recheio Cremoso</span>
+              <span class="product-micro-tag">120g de Pura Cremosidade</span>
+              <span class="product-micro-tag">Sobremesa Nobre</span>
+            </div>
+          </div>
+          <a href="https://wa.me/5561991518831?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20Paletas%20Recheadas%20na%20Lucas%20Bebidas!" class="btn-product-wa" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.178.182-.077.355.101.173.449.741.964 1.2 1.016.904 1.763 1.002 2.013 1.125.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+            <span>Consultar Sabores</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Aviso Regulamentar e Institucional do Catálogo -->
+      <div class="catalogo-disclaimer-box">
+        <div style="font-size: 2rem; color: var(--gold-400); flex-shrink: 0;">ℹ️</div>
+        <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+          <strong>Nota de Atendimento &amp; Disponibilidade:</strong> Os itens acima representam as principais categorias de conveniência atendidas no balcão da Lucas Bebidas em Planaltina-DF. Valores, marcas específicas e disponibilidade diária de estoque são confirmados diretamente no balcão ou via atendimento no WhatsApp. Bebidas alcoólicas são destinadas exclusivamente a maiores de 18 anos mediante apresentação de documento oficial (Lei 8.069/1990).
+        </p>
+      </div>
+
+    </div>
+  </section>
   <section class="section-about" id="sobre">
     <div class="container about-grid">
       <div class="about-text">
@@ -737,6 +1128,7 @@
           <h4 class="footer-col-title">Navegação</h4>
           <ul class="footer-links-list">
             <li><a href="#hero">Início</a></li>
+            <li><a href="#catalogo" style="color: var(--gold-300); font-weight: 700;">✨ Catálogo de Produtos</a></li>
             <li><a href="#sobre">Sobre o Estabelecimento</a></li>
             <li><a href="#atendimento">Orientações de Atendimento</a></li>
             <li><a href="#horarios">Horários de Funcionamento</a></li>

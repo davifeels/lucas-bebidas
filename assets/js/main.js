@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initCopyAddress();
   initHeroCardTilt();
+  initCatalogoFilter();
 });
 
 /**
@@ -237,4 +238,51 @@ function initHeroCardTilt() {
   card.addEventListener('mouseleave', () => {
     card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
   });
+}
+
+
+/**
+ * 8. FILTRO INTERATIVO DO CATÁLOGO DE CONVENIÊNCIA ("COISA DE PÁGINA RICA")
+ */
+function initCatalogoFilter() {
+  const tabs = document.querySelectorAll('.catalogo-tab-btn');
+  const searchInput = document.getElementById('catalogoSearchInput');
+  const cards = document.querySelectorAll('.product-card');
+
+  if (!cards.length) return;
+
+  let currentCategory = 'all';
+  let searchTerm = '';
+
+  function applyFilter() {
+    cards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      const text = (card.innerText || card.textContent).toLowerCase();
+
+      const matchesCategory = (currentCategory === 'all' || cardCategory === currentCategory);
+      const matchesSearch = (!searchTerm || text.includes(searchTerm));
+
+      if (matchesCategory && matchesSearch) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentCategory = tab.getAttribute('data-filter');
+      applyFilter();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchTerm = e.target.value.toLowerCase().trim();
+      applyFilter();
+    });
+  }
 }
